@@ -1,0 +1,5 @@
+- service: gcr
+  tag: master
+  type: push
+  image_name: codeship/gcr-dockercfg-generator
+  encrypted_dockercfg_path: dockercfg.encrypted

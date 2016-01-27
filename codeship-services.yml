@@ -1,0 +1,4 @@
+gcr:
+  build:
+    image: codeship/gcr-dockercfg-generator
+    dockerfile_path: ./Dockerfile
