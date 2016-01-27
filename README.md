@@ -44,7 +44,7 @@ Here is an example of using a GCR Dockercfg generator to authenticate pushing an
 # codeship-services.yml
 app:
   build:
-    image: gcr.io/myapp
+    image: gcr.io/project-id/myapp
     dockerfile_path: ./Dockerfile
 gcr_dockercfg:
   image: codeship/gcr-dockercfg-generator
@@ -56,7 +56,7 @@ gcr_dockercfg:
 - service: app
   type: push
   tag: master
-  image_name: gcr.io/myapp
+  image_name: gcr.io/project-id/myapp
   registry: https://gcr.io
   dockercfg_service: gcr_dockercfg
 ```
