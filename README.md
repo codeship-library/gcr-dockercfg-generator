@@ -4,7 +4,9 @@ Dockercfg generator for GCR
 
 This container allows you to generate a temporary dockercfg using your Google API credentials
 and writes it to a specified filename. Typical usage of this image would be to run it 
-with a volume attached, and write the dockercfg to that volume.
+with a volume attached, and write the dockercfg to that volume. Note that this generator only 
+works if you have a local Docker host available. Using a remote Docker host (Docker Machine 
+with AWS, etc) will result in an error because the generator writes to your local file system.
 
 ```
 $ cat gcr_creds.env
