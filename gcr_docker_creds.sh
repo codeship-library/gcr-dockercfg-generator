@@ -7,7 +7,7 @@ set -e
 : ${GOOGLE_PROJECT_ID:?'Set the GOOGLE_PROJECT_ID environment variable'}
 
 # Writing environment variable to Keyfile so it can be loaded later on
-echo "Logging into Google GCR"
+echo "Logging into Google Container Registry"
 echo $GOOGLE_AUTH_JSON > /keyconfig.json
 gcloud auth activate-service-account $GOOGLE_AUTH_EMAIL --key-file /keyconfig.json --project $GOOGLE_PROJECT_ID
 
