@@ -1,4 +1,12 @@
-gcr:
+dockercfg_generator:
   build:
     image: codeship/gcr-dockercfg-generator
     dockerfile_path: ./Dockerfile
+dockercfg_test:
+  build:
+    image: gcr.io/inner-melody-120319/codeship-testing
+    dockerfile_path: Dockerfile.test
+dockercfg_test_generator:
+  image: codeship/gcr-dockercfg-generator
+  add_docker: true
+  encrypted_env_file: gcr.env.encrypted
